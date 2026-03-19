@@ -435,7 +435,7 @@ Feature: Confirmación de adopción
 
 ## HU-13 – Visualizar adopciones realizadas
 
-- **Como** usuario del sistema (refugio o familia)
+- **Como** administrador
 - **Quiero** ver el historial de adopciones
 - **Para** hacer seguimiento de adopciones exitosas
 
