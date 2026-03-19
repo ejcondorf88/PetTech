@@ -196,7 +196,7 @@
 - DEV-13-1: Crear endpoint  de tipo GET /adopciones que nos devuelva el listado de adopciones con estado "adopción exitosa"
 - DEV-13-2: Configurar DTO de respuesta con los datos necesarios: nombre de la mascota, especie, fecha de adopción y nombre de la familia
 - DEV-13-3: Implementar paginación en el endpoint para que el sistema solo traiga los 10 primeros de cada pagina esto debido a que es mejor traer parte por parte que todo el resultado
-- DEV-13-4: Si la respuesta  es  vacía se debe retornar con mensaje informativo cuando el usuario no tiene adopciones en proceso
+- DEV-13-4: Si la respuesta  es  vacía se debe retornar con mensaje informativo cuando el usuario no tiene adopciones en estado "adopción exitosa"
 
 ### Tareas de QA
 - QA-13-1: Diseñar matriz de datos: usuario con múltiples adopciones, usuario sin ninguna adopción, filtro aplicado a un usuario específico, listado general sin filtro
@@ -229,8 +229,8 @@
 ### Tareas de DEV
 - DEV-15-1: Crear el  endpoint de tipo GET /adopciones/{id}/calendario que retorne el calendario asociado a una adopción  
 - DEV-15-2: Validar que la adopción referenciada exista y tenga estado "adopción exitosa" antes de retornar el calendario
-- DEV-15-3: Retornar mensaje renderizado en el frontend falta procesos por aprobar cuando la adopción está en estado "pendiente" o "aprobada" 
-- DEV-15-4: Retornar 404 con mensaje renderizado en el frontend cuando el usuario adoptante no tiene ninguna adopción registrada en el sistema
+- DEV-15-3: Retornar error 404 con mensaje renderizado en el frontend cuando la adopcion esta en proceso
+- DEV-15-4: Retornar error 404 con mensaje renderizado en el frontend cuando la adopcion no existe
 
 ### Tareas de QA
 - QA-15-1: Diseñar matriz de datos: adopción confirmada con calendario generado, adopción en estado pendiente, usuario sin adopciones, ID de adopción inexistente
