@@ -175,7 +175,7 @@
 
 ---
 
-## HU-12 – Confirmar adopción (3 SP)
+## HU-12 – Confirmar adopción (5 SP)
 
 ### Tareas de DEV
 - DEV-12-1: Crear tabla adopciones con los campos: id_solicitud (FK), id_familia (FK), id_mascota (FK), fecha_adopcion, estado

@@ -429,7 +429,7 @@ Feature: Confirmación de adopción
 ```
 
 ### Story Points HU-12
-- **Estimación:** 3 SP
+- **Estimación:** 5 SP
 - **Justificación:** Cambio de estado de solicitud, registro de fecha de adopción y actualización del estado de la mascota. Lógica transaccional directa sobre tablas relacionadas.
 
 ---
