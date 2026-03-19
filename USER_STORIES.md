@@ -405,21 +405,14 @@ Feature: Sugerencia de mascota alternativa
 ```gherkin
 Feature: Confirmación de adopción
 
-  Scenario: Cambio de estado a adopción exitosa
-    Given que existe una solicitud de adopción con estado aprobada
-    When el administrador confirma la adopción
-    Then el estado de la solicitud cambia a adopción exitosa
+Scenario: Confirmación exitosa de adopción
+  Given que existe una solicitud de adopción con estado aprobada
+  When el administrador confirma la adopción
+  Then el estado de la solicitud cambia a adopción exitosa
+  And el sistema registra automáticamente la fecha de adopción
+  And la mascota queda vinculada a la familia en el registro de adopciones
+  And el estado de la mascota se actualiza a adoptada
 
-  Scenario: Registro de la fecha de adopción
-    Given que el administrador confirma una adopción
-    When la adopción es registrada como exitosa
-    Then el sistema registra automáticamente la fecha de la adopción
-
-  Scenario: Vinculación de mascota con familia
-    Given que una adopción ha sido confirmada
-    When el sistema registra la adopción como exitosa
-    Then la mascota queda vinculada a la familia adoptante en el registro de adopciones
-    And el estado de la mascota se actualiza a adoptada
 
   Scenario: Intento de confirmar una solicitud que no está aprobada
     Given que existe una solicitud con estado pendiente o rechazada
