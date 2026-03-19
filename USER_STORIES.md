@@ -16,7 +16,7 @@
 Feature: Registro de información básica de mascota
 
   Scenario: Registro exitoso
-    Given que el administrador del refugio completa los campos obligatorios
+    Given que el administrador del refugio completa los campos obligatorios como nombre, edad, especie , sexo
     When confirma el registro de la mascota
     Then el sistema almacena los datos de la mascota
 
