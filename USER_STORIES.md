@@ -446,23 +446,23 @@ Feature: Confirmación de adopción
 Feature: Visualización de adopciones realizadas
 
   Scenario: Visualización del historial general de adopciones
-    Given que el usuario se encuentra en la sección de adopciones realizadas
+    Given que el administrador se encuentra en la sección de adopciones realizadas
     When consulta el historial
     Then el sistema muestra únicamente los registros con estado adopción exitosa
 
   Scenario: Visualización paginada del historial
     Given que existen más de 10 adopciones registradas como exitosas
-    When el usuario consulta el historial
+    When el administrador consulta el historial
     Then el sistema muestra los resultados agrupados de a 10 registros por página
 
   Scenario: Filtrado de adopciones por usuario específico
-    Given que el usuario visualiza el historial de adopciones
-    When solicita ver únicamente las adopciones asociadas a su cuenta
-    Then el sistema muestra únicamente las adopciones vinculadas a ese usuario
+    Given que el administrador visualiza el historial de adopciones
+    When solicita ver únicamente las adopciones asociadas a una familia
+    Then el sistema muestra únicamente las adopciones vinculadas a esa familia
 
-  Scenario: Usuario sin adopciones registradas
-    Given que el usuario no tiene adopciones con estado exitoso
-    When consulta el historial de adopciones
+  Scenario: Familia sin adopciones registradas
+    Given que la familia no tiene adopciones con estado exitoso
+    When el administrador consulta el historial de adopciones
     Then el sistema retorna una respuesta vacía con un mensaje informativo
 ```
 
