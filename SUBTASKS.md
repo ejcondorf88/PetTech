@@ -73,7 +73,7 @@
 ### Tareas de DEV
 -DEV-05-1: Crear tabla condiciones_hogar con los campos: id_familia (FK), tipo_vivienda, tamaño_hogar, presencia_ninos, horas_sola_mascota, ingresos_estimados, experiencia_previa, motivacion
 - DEV-05-2: Crear DTO de entrada CondicionesHogarDTO con validaciones de campos obligatorios (tipo_vivienda, tamaño_hogar, horas_sola_mascota, ingresos_estimados)
-- DEV-05-3: Exponer endpoint PUT /familias/{id}/hogar para registrar o actualizar las condiciones del hogar de la familia
+- DEV-05-3: Exponer endpoint de tipo POST /familias/{id}/hogar para registrar las condiciones del hogar de la familia
 - DEV-05-4: Implementar sub-estructura opcional para mascotas existentes en el hogar (especie, edad, estado de vacunación)
 
 ### Tareas de QA
@@ -139,7 +139,7 @@
 - DEV-09-1: Exponer endpoint GET /solicitudes/{id} que retorne la información consolidada de la solicitud en formato json
 - DEV-09-2: Realizar JOIN entre la tabla solicitudes_adopcion, familias_adoptantes y mascotas para armar la respuesta en un objeto aplanado
 - DEV-09-3: Implementar respuesta 404 con mensaje el cual pueda ser de facil entendimiento desde el frontend
-- DEV-09-4: Implementar la vista para que solo el adminsitrador pueda ver las solicitudes correspondientes
+- DEV-09-4: Implementar middleware para que solo el adminsitrador pueda ver las solicitudes correspondientes
 ### Tareas de QA
 - QA-09-1: Diseñar matriz de datos: solicitud existente con informacion completa de la  familia y mascota, entre otros datos relevantes
 - QA-09-2: Automatizar escenario: consulta exitosa — respuesta contiene información de la familia y de la mascota correctamente aplanada
@@ -229,8 +229,8 @@
 ### Tareas de DEV
 - DEV-15-1: Crear el  endpoint de tipo GET /adopciones/{id}/calendario que retorne el calendario asociado a una adopción  
 - DEV-15-2: Validar que la adopción referenciada exista y tenga estado "adopción exitosa" antes de retornar el calendario
-- DEV-15-3: Retornar error 404 con mensaje renderizado en el frontend cuando la adopcion esta en proceso
-- DEV-15-4: Retornar error 404 con mensaje renderizado en el frontend cuando la adopcion no existe
+- DEV-15-3: Retornar error 404 con mensaje legible cuando la adopcion esta en proceso
+
 
 ### Tareas de QA
 - QA-15-1: Diseñar matriz de datos: adopción confirmada con calendario generado, adopción en estado pendiente, usuario sin adopciones, ID de adopción inexistente
