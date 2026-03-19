@@ -280,10 +280,11 @@ Feature: Solicitud de adopción
     Then el sistema registra la solicitud con estado pendiente
     And el sistema actualiza el estado de la mascota a en proceso de adopción
 
-  Scenario: Estado inicial de la solicitud
+  Scenario: La solicitud no se aprueba automáticamente
     Given que la familia adoptante ha enviado una solicitud de adopción
     When la solicitud es registrada en el sistema
     Then el estado de la solicitud queda como pendiente
+    And la solicitud no debe estar en estado aprobado ni rechazado
 
   Scenario: Familia sin condiciones del hogar registradas
     Given que la familia no ha completado el registro de condiciones del hogar
